@@ -1,8 +1,7 @@
-{
-  countries: [
+let countriesData = [
     {
         "name": "Afghanistan",
-        "alpha-2": "AF",
+        "alpha": "AF",
         "alpha-3": "AFG",
         "country-code": "4",
         "iso_3166-2": "ISO 3166-2:AF",
@@ -11,7 +10,7 @@
     },
     {
         "name": "Åland Islands",
-        "alpha-2": "AX",
+        "alpha": "AX",
         "alpha-3": "ALA",
         "country-code": "248",
         "iso_3166-2": "ISO 3166-2:AX",
@@ -20,7 +19,7 @@
     },
     {
         "name": "Albania",
-        "alpha-2": "AL",
+        "alpha": "AL",
         "alpha-3": "ALB",
         "country-code": "8",
         "iso_3166-2": "ISO 3166-2:AL",
@@ -29,7 +28,7 @@
     },
     {
         "name": "Algeria",
-        "alpha-2": "DZ",
+        "alpha": "DZ",
         "alpha-3": "DZA",
         "country-code": "12",
         "iso_3166-2": "ISO 3166-2:DZ",
@@ -38,7 +37,7 @@
     },
     {
         "name": "American Samoa",
-        "alpha-2": "AS",
+        "alpha": "AS",
         "alpha-3": "ASM",
         "country-code": "16",
         "iso_3166-2": "ISO 3166-2:AS",
@@ -47,7 +46,7 @@
     },
     {
         "name": "Andorra",
-        "alpha-2": "AD",
+        "alpha": "AD",
         "alpha-3": "AND",
         "country-code": "20",
         "iso_3166-2": "ISO 3166-2:AD",
@@ -56,7 +55,7 @@
     },
     {
         "name": "Angola",
-        "alpha-2": "AO",
+        "alpha": "AO",
         "alpha-3": "AGO",
         "country-code": "24",
         "iso_3166-2": "ISO 3166-2:AO",
@@ -65,7 +64,7 @@
     },
     {
         "name": "Anguilla",
-        "alpha-2": "AI",
+        "alpha": "AI",
         "alpha-3": "AIA",
         "country-code": "660",
         "iso_3166-2": "ISO 3166-2:AI",
@@ -74,14 +73,14 @@
     },
     {
         "name": "Antarctica",
-        "alpha-2": "AQ",
+        "alpha": "AQ",
         "alpha-3": "ATA",
         "country-code": "10",
         "iso_3166-2": "ISO 3166-2:AQ"
     },
     {
         "name": "Antigua and Barbuda",
-        "alpha-2": "AG",
+        "alpha": "AG",
         "alpha-3": "ATG",
         "country-code": "28",
         "iso_3166-2": "ISO 3166-2:AG",
@@ -90,7 +89,7 @@
     },
     {
         "name": "Argentina",
-        "alpha-2": "AR",
+        "alpha": "AR",
         "alpha-3": "ARG",
         "country-code": "32",
         "iso_3166-2": "ISO 3166-2:AR",
@@ -99,7 +98,7 @@
     },
     {
         "name": "Armenia",
-        "alpha-2": "AM",
+        "alpha": "AM",
         "alpha-3": "ARM",
         "country-code": "51",
         "iso_3166-2": "ISO 3166-2:AM",
@@ -108,7 +107,7 @@
     },
     {
         "name": "Aruba",
-        "alpha-2": "AW",
+        "alpha": "AW",
         "alpha-3": "ABW",
         "country-code": "533",
         "iso_3166-2": "ISO 3166-2:AW",
@@ -117,7 +116,7 @@
     },
     {
         "name": "Australia",
-        "alpha-2": "AU",
+        "alpha": "AU",
         "alpha-3": "AUS",
         "country-code": "36",
         "iso_3166-2": "ISO 3166-2:AU",
@@ -126,7 +125,7 @@
     },
     {
         "name": "Austria",
-        "alpha-2": "AT",
+        "alpha": "AT",
         "alpha-3": "AUT",
         "country-code": "40",
         "iso_3166-2": "ISO 3166-2:AT",
@@ -135,7 +134,7 @@
     },
     {
         "name": "Azerbaijan",
-        "alpha-2": "AZ",
+        "alpha": "AZ",
         "alpha-3": "AZE",
         "country-code": "31",
         "iso_3166-2": "ISO 3166-2:AZ",
@@ -144,7 +143,7 @@
     },
     {
         "name": "Bahamas",
-        "alpha-2": "BS",
+        "alpha": "BS",
         "alpha-3": "BHS",
         "country-code": "44",
         "iso_3166-2": "ISO 3166-2:BS",
@@ -153,7 +152,7 @@
     },
     {
         "name": "Bahrain",
-        "alpha-2": "BH",
+        "alpha": "BH",
         "alpha-3": "BHR",
         "country-code": "48",
         "iso_3166-2": "ISO 3166-2:BH",
@@ -162,7 +161,7 @@
     },
     {
         "name": "Bangladesh",
-        "alpha-2": "BD",
+        "alpha": "BD",
         "alpha-3": "BGD",
         "country-code": "50",
         "iso_3166-2": "ISO 3166-2:BD",
@@ -171,7 +170,7 @@
     },
     {
         "name": "Barbados",
-        "alpha-2": "BB",
+        "alpha": "BB",
         "alpha-3": "BRB",
         "country-code": "52",
         "iso_3166-2": "ISO 3166-2:BB",
@@ -180,7 +179,7 @@
     },
     {
         "name": "Belarus",
-        "alpha-2": "BY",
+        "alpha": "BY",
         "alpha-3": "BLR",
         "country-code": "112",
         "iso_3166-2": "ISO 3166-2:BY",
@@ -189,7 +188,7 @@
     },
     {
         "name": "Belgium",
-        "alpha-2": "BE",
+        "alpha": "BE",
         "alpha-3": "BEL",
         "country-code": "56",
         "iso_3166-2": "ISO 3166-2:BE",
@@ -198,7 +197,7 @@
     },
     {
         "name": "Belize",
-        "alpha-2": "BZ",
+        "alpha": "BZ",
         "alpha-3": "BLZ",
         "country-code": "84",
         "iso_3166-2": "ISO 3166-2:BZ",
@@ -207,7 +206,7 @@
     },
     {
         "name": "Benin",
-        "alpha-2": "BJ",
+        "alpha": "BJ",
         "alpha-3": "BEN",
         "country-code": "204",
         "iso_3166-2": "ISO 3166-2:BJ",
@@ -216,7 +215,7 @@
     },
     {
         "name": "Bermuda",
-        "alpha-2": "BM",
+        "alpha": "BM",
         "alpha-3": "BMU",
         "country-code": "60",
         "iso_3166-2": "ISO 3166-2:BM",
@@ -225,7 +224,7 @@
     },
     {
         "name": "Bhutan",
-        "alpha-2": "BT",
+        "alpha": "BT",
         "alpha-3": "BTN",
         "country-code": "64",
         "iso_3166-2": "ISO 3166-2:BT",
@@ -234,7 +233,7 @@
     },
     {
         "name": "Bolivia",
-        "alpha-2": "BO",
+        "alpha": "BO",
         "alpha-3": "BOL",
         "country-code": "68",
         "iso_3166-2": "ISO 3166-2:BO",
@@ -243,7 +242,7 @@
     },
     {
         "name": "Bonaire, Sint Eustatius and Saba",
-        "alpha-2": "BQ",
+        "alpha": "BQ",
         "alpha-3": "BES",
         "country-code": "535",
         "iso_3166-2": "ISO 3166-2:BQ",
@@ -252,7 +251,7 @@
     },
     {
         "name": "Bosnia and Herzegovina",
-        "alpha-2": "BA",
+        "alpha": "BA",
         "alpha-3": "BIH",
         "country-code": "70",
         "iso_3166-2": "ISO 3166-2:BA",
@@ -261,7 +260,7 @@
     },
     {
         "name": "Botswana",
-        "alpha-2": "BW",
+        "alpha": "BW",
         "alpha-3": "BWA",
         "country-code": "72",
         "iso_3166-2": "ISO 3166-2:BW",
@@ -270,14 +269,14 @@
     },
     {
         "name": "Bouvet Island",
-        "alpha-2": "BV",
+        "alpha": "BV",
         "alpha-3": "BVT",
         "country-code": "74",
         "iso_3166-2": "ISO 3166-2:BV"
     },
     {
         "name": "Brazil",
-        "alpha-2": "BR",
+        "alpha": "BR",
         "alpha-3": "BRA",
         "country-code": "76",
         "iso_3166-2": "ISO 3166-2:BR",
@@ -286,14 +285,14 @@
     },
     {
         "name": "British Indian Ocean Territory",
-        "alpha-2": "IO",
+        "alpha": "IO",
         "alpha-3": "IOT",
         "country-code": "86",
         "iso_3166-2": "ISO 3166-2:IO"
     },
     {
         "name": "Brunei Darussalam",
-        "alpha-2": "BN",
+        "alpha": "BN",
         "alpha-3": "BRN",
         "country-code": "96",
         "iso_3166-2": "ISO 3166-2:BN",
@@ -302,7 +301,7 @@
     },
     {
         "name": "Bulgaria",
-        "alpha-2": "BG",
+        "alpha": "BG",
         "alpha-3": "BGR",
         "country-code": "100",
         "iso_3166-2": "ISO 3166-2:BG",
@@ -311,7 +310,7 @@
     },
     {
         "name": "Burkina Faso",
-        "alpha-2": "BF",
+        "alpha": "BF",
         "alpha-3": "BFA",
         "country-code": "854",
         "iso_3166-2": "ISO 3166-2:BF",
@@ -320,7 +319,7 @@
     },
     {
         "name": "Burundi",
-        "alpha-2": "BI",
+        "alpha": "BI",
         "alpha-3": "BDI",
         "country-code": "108",
         "iso_3166-2": "ISO 3166-2:BI",
@@ -329,7 +328,7 @@
     },
     {
         "name": "Cambodia",
-        "alpha-2": "KH",
+        "alpha": "KH",
         "alpha-3": "KHM",
         "country-code": "116",
         "iso_3166-2": "ISO 3166-2:KH",
@@ -338,7 +337,7 @@
     },
     {
         "name": "Cameroon",
-        "alpha-2": "CM",
+        "alpha": "CM",
         "alpha-3": "CMR",
         "country-code": "120",
         "iso_3166-2": "ISO 3166-2:CM",
@@ -347,7 +346,7 @@
     },
     {
         "name": "Canada",
-        "alpha-2": "CA",
+        "alpha": "CA",
         "alpha-3": "CAN",
         "country-code": "124",
         "iso_3166-2": "ISO 3166-2:CA",
@@ -356,7 +355,7 @@
     },
     {
         "name": "Cabo Verde",
-        "alpha-2": "CV",
+        "alpha": "CV",
         "alpha-3": "CPV",
         "country-code": "132",
         "iso_3166-2": "ISO 3166-2:CV",
@@ -365,7 +364,7 @@
     },
     {
         "name": "Cayman Islands",
-        "alpha-2": "KY",
+        "alpha": "KY",
         "alpha-3": "CYM",
         "country-code": "136",
         "iso_3166-2": "ISO 3166-2:KY",
@@ -374,7 +373,7 @@
     },
     {
         "name": "Central African Republic",
-        "alpha-2": "CF",
+        "alpha": "CF",
         "alpha-3": "CAF",
         "country-code": "140",
         "iso_3166-2": "ISO 3166-2:CF",
@@ -383,7 +382,7 @@
     },
     {
         "name": "Chad",
-        "alpha-2": "TD",
+        "alpha": "TD",
         "alpha-3": "TCD",
         "country-code": "148",
         "iso_3166-2": "ISO 3166-2:TD",
@@ -392,7 +391,7 @@
     },
     {
         "name": "Chile",
-        "alpha-2": "CL",
+        "alpha": "CL",
         "alpha-3": "CHL",
         "country-code": "152",
         "iso_3166-2": "ISO 3166-2:CL",
@@ -401,7 +400,7 @@
     },
     {
         "name": "China",
-        "alpha-2": "CN",
+        "alpha": "CN",
         "alpha-3": "CHN",
         "country-code": "156",
         "iso_3166-2": "ISO 3166-2:CN",
@@ -410,21 +409,21 @@
     },
     {
         "name": "Christmas Island",
-        "alpha-2": "CX",
+        "alpha": "CX",
         "alpha-3": "CXR",
         "country-code": "162",
         "iso_3166-2": "ISO 3166-2:CX"
     },
     {
         "name": "Cocos (Keeling) Islands",
-        "alpha-2": "CC",
+        "alpha": "CC",
         "alpha-3": "CCK",
         "country-code": "166",
         "iso_3166-2": "ISO 3166-2:CC"
     },
     {
         "name": "Colombia",
-        "alpha-2": "CO",
+        "alpha": "CO",
         "alpha-3": "COL",
         "country-code": "170",
         "iso_3166-2": "ISO 3166-2:CO",
@@ -433,7 +432,7 @@
     },
     {
         "name": "Comoros",
-        "alpha-2": "KM",
+        "alpha": "KM",
         "alpha-3": "COM",
         "country-code": "174",
         "iso_3166-2": "ISO 3166-2:KM",
@@ -442,7 +441,7 @@
     },
     {
         "name": "Congo",
-        "alpha-2": "CG",
+        "alpha": "CG",
         "alpha-3": "COG",
         "country-code": "178",
         "iso_3166-2": "ISO 3166-2:CG",
@@ -451,7 +450,7 @@
     },
     {
         "name": "Congo (Democratic Republic of the)",
-        "alpha-2": "CD",
+        "alpha": "CD",
         "alpha-3": "COD",
         "country-code": "180",
         "iso_3166-2": "ISO 3166-2:CD",
@@ -460,7 +459,7 @@
     },
     {
         "name": "Cook Islands",
-        "alpha-2": "CK",
+        "alpha": "CK",
         "alpha-3": "COK",
         "country-code": "184",
         "iso_3166-2": "ISO 3166-2:CK",
@@ -469,7 +468,7 @@
     },
     {
         "name": "Costa Rica",
-        "alpha-2": "CR",
+        "alpha": "CR",
         "alpha-3": "CRI",
         "country-code": "188",
         "iso_3166-2": "ISO 3166-2:CR",
@@ -478,7 +477,7 @@
     },
     {
         "name": "Côte d'Ivoire",
-        "alpha-2": "CI",
+        "alpha": "CI",
         "alpha-3": "CIV",
         "country-code": "384",
         "iso_3166-2": "ISO 3166-2:CI",
@@ -487,7 +486,7 @@
     },
     {
         "name": "Croatia",
-        "alpha-2": "HR",
+        "alpha": "HR",
         "alpha-3": "HRV",
         "country-code": "191",
         "iso_3166-2": "ISO 3166-2:HR",
@@ -496,7 +495,7 @@
     },
     {
         "name": "Cuba",
-        "alpha-2": "CU",
+        "alpha": "CU",
         "alpha-3": "CUB",
         "country-code": "192",
         "iso_3166-2": "ISO 3166-2:CU",
@@ -505,7 +504,7 @@
     },
     {
         "name": "Curaçao",
-        "alpha-2": "CW",
+        "alpha": "CW",
         "alpha-3": "CUW",
         "country-code": "531",
         "iso_3166-2": "ISO 3166-2:CW",
@@ -514,7 +513,7 @@
     },
     {
         "name": "Cyprus",
-        "alpha-2": "CY",
+        "alpha": "CY",
         "alpha-3": "CYP",
         "country-code": "196",
         "iso_3166-2": "ISO 3166-2:CY",
@@ -523,7 +522,7 @@
     },
     {
         "name": "Czech Republic",
-        "alpha-2": "CZ",
+        "alpha": "CZ",
         "alpha-3": "CZE",
         "country-code": "203",
         "iso_3166-2": "ISO 3166-2:CZ",
@@ -532,7 +531,7 @@
     },
     {
         "name": "Denmark",
-        "alpha-2": "DK",
+        "alpha": "DK",
         "alpha-3": "DNK",
         "country-code": "208",
         "iso_3166-2": "ISO 3166-2:DK",
@@ -541,7 +540,7 @@
     },
     {
         "name": "Djibouti",
-        "alpha-2": "DJ",
+        "alpha": "DJ",
         "alpha-3": "DJI",
         "country-code": "262",
         "iso_3166-2": "ISO 3166-2:DJ",
@@ -550,7 +549,7 @@
     },
     {
         "name": "Dominica",
-        "alpha-2": "DM",
+        "alpha": "DM",
         "alpha-3": "DMA",
         "country-code": "212",
         "iso_3166-2": "ISO 3166-2:DM",
@@ -559,7 +558,7 @@
     },
     {
         "name": "Dominican Republic",
-        "alpha-2": "DO",
+        "alpha": "DO",
         "alpha-3": "DOM",
         "country-code": "214",
         "iso_3166-2": "ISO 3166-2:DO",
@@ -568,7 +567,7 @@
     },
     {
         "name": "Ecuador",
-        "alpha-2": "EC",
+        "alpha": "EC",
         "alpha-3": "ECU",
         "country-code": "218",
         "iso_3166-2": "ISO 3166-2:EC",
@@ -577,7 +576,7 @@
     },
     {
         "name": "Egypt",
-        "alpha-2": "EG",
+        "alpha": "EG",
         "alpha-3": "EGY",
         "country-code": "818",
         "iso_3166-2": "ISO 3166-2:EG",
@@ -586,7 +585,7 @@
     },
     {
         "name": "El Salvador",
-        "alpha-2": "SV",
+        "alpha": "SV",
         "alpha-3": "SLV",
         "country-code": "222",
         "iso_3166-2": "ISO 3166-2:SV",
@@ -595,7 +594,7 @@
     },
     {
         "name": "Equatorial Guinea",
-        "alpha-2": "GQ",
+        "alpha": "GQ",
         "alpha-3": "GNQ",
         "country-code": "226",
         "iso_3166-2": "ISO 3166-2:GQ",
@@ -604,7 +603,7 @@
     },
     {
         "name": "Eritrea",
-        "alpha-2": "ER",
+        "alpha": "ER",
         "alpha-3": "ERI",
         "country-code": "232",
         "iso_3166-2": "ISO 3166-2:ER",
@@ -613,7 +612,7 @@
     },
     {
         "name": "Estonia",
-        "alpha-2": "EE",
+        "alpha": "EE",
         "alpha-3": "EST",
         "country-code": "233",
         "iso_3166-2": "ISO 3166-2:EE",
@@ -622,7 +621,7 @@
     },
     {
         "name": "Ethiopia",
-        "alpha-2": "ET",
+        "alpha": "ET",
         "alpha-3": "ETH",
         "country-code": "231",
         "iso_3166-2": "ISO 3166-2:ET",
@@ -631,7 +630,7 @@
     },
     {
         "name": "Falkland Islands (Malvinas)",
-        "alpha-2": "FK",
+        "alpha": "FK",
         "alpha-3": "FLK",
         "country-code": "238",
         "iso_3166-2": "ISO 3166-2:FK",
@@ -640,7 +639,7 @@
     },
     {
         "name": "Faroe Islands",
-        "alpha-2": "FO",
+        "alpha": "FO",
         "alpha-3": "FRO",
         "country-code": "234",
         "iso_3166-2": "ISO 3166-2:FO",
@@ -649,7 +648,7 @@
     },
     {
         "name": "Fiji",
-        "alpha-2": "FJ",
+        "alpha": "FJ",
         "alpha-3": "FJI",
         "country-code": "242",
         "iso_3166-2": "ISO 3166-2:FJ",
@@ -658,7 +657,7 @@
     },
     {
         "name": "Finland",
-        "alpha-2": "FI",
+        "alpha": "FI",
         "alpha-3": "FIN",
         "country-code": "246",
         "iso_3166-2": "ISO 3166-2:FI",
@@ -667,7 +666,7 @@
     },
     {
         "name": "France",
-        "alpha-2": "FR",
+        "alpha": "FR",
         "alpha-3": "FRA",
         "country-code": "250",
         "iso_3166-2": "ISO 3166-2:FR",
@@ -676,7 +675,7 @@
     },
     {
         "name": "French Guiana",
-        "alpha-2": "GF",
+        "alpha": "GF",
         "alpha-3": "GUF",
         "country-code": "254",
         "iso_3166-2": "ISO 3166-2:GF",
@@ -685,7 +684,7 @@
     },
     {
         "name": "French Polynesia",
-        "alpha-2": "PF",
+        "alpha": "PF",
         "alpha-3": "PYF",
         "country-code": "258",
         "iso_3166-2": "ISO 3166-2:PF",
@@ -694,14 +693,14 @@
     },
     {
         "name": "French Southern Territories",
-        "alpha-2": "TF",
+        "alpha": "TF",
         "alpha-3": "ATF",
         "country-code": "260",
         "iso_3166-2": "ISO 3166-2:TF"
     },
     {
         "name": "Gabon",
-        "alpha-2": "GA",
+        "alpha": "GA",
         "alpha-3": "GAB",
         "country-code": "266",
         "iso_3166-2": "ISO 3166-2:GA",
@@ -710,7 +709,7 @@
     },
     {
         "name": "Gambia",
-        "alpha-2": "GM",
+        "alpha": "GM",
         "alpha-3": "GMB",
         "country-code": "270",
         "iso_3166-2": "ISO 3166-2:GM",
@@ -719,7 +718,7 @@
     },
     {
         "name": "Georgia",
-        "alpha-2": "GE",
+        "alpha": "GE",
         "alpha-3": "GEO",
         "country-code": "268",
         "iso_3166-2": "ISO 3166-2:GE",
@@ -728,7 +727,7 @@
     },
     {
         "name": "Germany",
-        "alpha-2": "DE",
+        "alpha": "DE",
         "alpha-3": "DEU",
         "country-code": "276",
         "iso_3166-2": "ISO 3166-2:DE",
@@ -737,7 +736,7 @@
     },
     {
         "name": "Ghana",
-        "alpha-2": "GH",
+        "alpha": "GH",
         "alpha-3": "GHA",
         "country-code": "288",
         "iso_3166-2": "ISO 3166-2:GH",
@@ -746,7 +745,7 @@
     },
     {
         "name": "Gibraltar",
-        "alpha-2": "GI",
+        "alpha": "GI",
         "alpha-3": "GIB",
         "country-code": "292",
         "iso_3166-2": "ISO 3166-2:GI",
@@ -755,7 +754,7 @@
     },
     {
         "name": "Greece",
-        "alpha-2": "GR",
+        "alpha": "GR",
         "alpha-3": "GRC",
         "country-code": "300",
         "iso_3166-2": "ISO 3166-2:GR",
@@ -764,7 +763,7 @@
     },
     {
         "name": "Greenland",
-        "alpha-2": "GL",
+        "alpha": "GL",
         "alpha-3": "GRL",
         "country-code": "304",
         "iso_3166-2": "ISO 3166-2:GL",
@@ -773,7 +772,7 @@
     },
     {
         "name": "Grenada",
-        "alpha-2": "GD",
+        "alpha": "GD",
         "alpha-3": "GRD",
         "country-code": "308",
         "iso_3166-2": "ISO 3166-2:GD",
@@ -782,7 +781,7 @@
     },
     {
         "name": "Guadeloupe",
-        "alpha-2": "GP",
+        "alpha": "GP",
         "alpha-3": "GLP",
         "country-code": "312",
         "iso_3166-2": "ISO 3166-2:GP",
@@ -791,7 +790,7 @@
     },
     {
         "name": "Guam",
-        "alpha-2": "GU",
+        "alpha": "GU",
         "alpha-3": "GUM",
         "country-code": "316",
         "iso_3166-2": "ISO 3166-2:GU",
@@ -800,7 +799,7 @@
     },
     {
         "name": "Guatemala",
-        "alpha-2": "GT",
+        "alpha": "GT",
         "alpha-3": "GTM",
         "country-code": "320",
         "iso_3166-2": "ISO 3166-2:GT",
@@ -809,7 +808,7 @@
     },
     {
         "name": "Guernsey",
-        "alpha-2": "GG",
+        "alpha": "GG",
         "alpha-3": "GGY",
         "country-code": "831",
         "iso_3166-2": "ISO 3166-2:GG",
@@ -818,7 +817,7 @@
     },
     {
         "name": "Guinea",
-        "alpha-2": "GN",
+        "alpha": "GN",
         "alpha-3": "GIN",
         "country-code": "324",
         "iso_3166-2": "ISO 3166-2:GN",
@@ -827,7 +826,7 @@
     },
     {
         "name": "Guinea-Bissau",
-        "alpha-2": "GW",
+        "alpha": "GW",
         "alpha-3": "GNB",
         "country-code": "624",
         "iso_3166-2": "ISO 3166-2:GW",
@@ -836,7 +835,7 @@
     },
     {
         "name": "Guyana",
-        "alpha-2": "GY",
+        "alpha": "GY",
         "alpha-3": "GUY",
         "country-code": "328",
         "iso_3166-2": "ISO 3166-2:GY",
@@ -845,7 +844,7 @@
     },
     {
         "name": "Haiti",
-        "alpha-2": "HT",
+        "alpha": "HT",
         "alpha-3": "HTI",
         "country-code": "332",
         "iso_3166-2": "ISO 3166-2:HT",
@@ -854,14 +853,14 @@
     },
     {
         "name": "Heard Island and McDonald Islands",
-        "alpha-2": "HM",
+        "alpha": "HM",
         "alpha-3": "HMD",
         "country-code": "334",
         "iso_3166-2": "ISO 3166-2:HM"
     },
     {
         "name": "Holy See",
-        "alpha-2": "VA",
+        "alpha": "VA",
         "alpha-3": "VAT",
         "country-code": "336",
         "iso_3166-2": "ISO 3166-2:VA",
@@ -870,7 +869,7 @@
     },
     {
         "name": "Honduras",
-        "alpha-2": "HN",
+        "alpha": "HN",
         "alpha-3": "HND",
         "country-code": "340",
         "iso_3166-2": "ISO 3166-2:HN",
@@ -879,7 +878,7 @@
     },
     {
         "name": "Hong Kong",
-        "alpha-2": "HK",
+        "alpha": "HK",
         "alpha-3": "HKG",
         "country-code": "344",
         "iso_3166-2": "ISO 3166-2:HK",
@@ -888,7 +887,7 @@
     },
     {
         "name": "Hungary",
-        "alpha-2": "HU",
+        "alpha": "HU",
         "alpha-3": "HUN",
         "country-code": "348",
         "iso_3166-2": "ISO 3166-2:HU",
@@ -897,7 +896,7 @@
     },
     {
         "name": "Iceland",
-        "alpha-2": "IS",
+        "alpha": "IS",
         "alpha-3": "ISL",
         "country-code": "352",
         "iso_3166-2": "ISO 3166-2:IS",
@@ -906,7 +905,7 @@
     },
     {
         "name": "India",
-        "alpha-2": "IN",
+        "alpha": "IN",
         "alpha-3": "IND",
         "country-code": "356",
         "iso_3166-2": "ISO 3166-2:IN",
@@ -915,7 +914,7 @@
     },
     {
         "name": "Indonesia",
-        "alpha-2": "ID",
+        "alpha": "ID",
         "alpha-3": "IDN",
         "country-code": "360",
         "iso_3166-2": "ISO 3166-2:ID",
@@ -924,7 +923,7 @@
     },
     {
         "name": "Iran",
-        "alpha-2": "IR",
+        "alpha": "IR",
         "alpha-3": "IRN",
         "country-code": "364",
         "iso_3166-2": "ISO 3166-2:IR",
@@ -933,7 +932,7 @@
     },
     {
         "name": "Iraq",
-        "alpha-2": "IQ",
+        "alpha": "IQ",
         "alpha-3": "IRQ",
         "country-code": "368",
         "iso_3166-2": "ISO 3166-2:IQ",
@@ -942,7 +941,7 @@
     },
     {
         "name": "Ireland",
-        "alpha-2": "IE",
+        "alpha": "IE",
         "alpha-3": "IRL",
         "country-code": "372",
         "iso_3166-2": "ISO 3166-2:IE",
@@ -951,7 +950,7 @@
     },
     {
         "name": "Isle of Man",
-        "alpha-2": "IM",
+        "alpha": "IM",
         "alpha-3": "IMN",
         "country-code": "833",
         "iso_3166-2": "ISO 3166-2:IM",
@@ -960,7 +959,7 @@
     },
     {
         "name": "Israel",
-        "alpha-2": "IL",
+        "alpha": "IL",
         "alpha-3": "ISR",
         "country-code": "376",
         "iso_3166-2": "ISO 3166-2:IL",
@@ -969,7 +968,7 @@
     },
     {
         "name": "Italy",
-        "alpha-2": "IT",
+        "alpha": "IT",
         "alpha-3": "ITA",
         "country-code": "380",
         "iso_3166-2": "ISO 3166-2:IT",
@@ -978,7 +977,7 @@
     },
     {
         "name": "Jamaica",
-        "alpha-2": "JM",
+        "alpha": "JM",
         "alpha-3": "JAM",
         "country-code": "388",
         "iso_3166-2": "ISO 3166-2:JM",
@@ -987,7 +986,7 @@
     },
     {
         "name": "Japan",
-        "alpha-2": "JP",
+        "alpha": "JP",
         "alpha-3": "JPN",
         "country-code": "392",
         "iso_3166-2": "ISO 3166-2:JP",
@@ -996,7 +995,7 @@
     },
     {
         "name": "Jersey",
-        "alpha-2": "JE",
+        "alpha": "JE",
         "alpha-3": "JEY",
         "country-code": "832",
         "iso_3166-2": "ISO 3166-2:JE",
@@ -1005,7 +1004,7 @@
     },
     {
         "name": "Jordan",
-        "alpha-2": "JO",
+        "alpha": "JO",
         "alpha-3": "JOR",
         "country-code": "400",
         "iso_3166-2": "ISO 3166-2:JO",
@@ -1014,7 +1013,7 @@
     },
     {
         "name": "Kazakhstan",
-        "alpha-2": "KZ",
+        "alpha": "KZ",
         "alpha-3": "KAZ",
         "country-code": "398",
         "iso_3166-2": "ISO 3166-2:KZ",
@@ -1023,7 +1022,7 @@
     },
     {
         "name": "Kenya",
-        "alpha-2": "KE",
+        "alpha": "KE",
         "alpha-3": "KEN",
         "country-code": "404",
         "iso_3166-2": "ISO 3166-2:KE",
@@ -1032,7 +1031,7 @@
     },
     {
         "name": "Kiribati",
-        "alpha-2": "KI",
+        "alpha": "KI",
         "alpha-3": "KIR",
         "country-code": "296",
         "iso_3166-2": "ISO 3166-2:KI",
@@ -1041,7 +1040,7 @@
     },
     {
         "name": "North Korea",
-        "alpha-2": "KP",
+        "alpha": "KP",
         "alpha-3": "PRK",
         "country-code": "408",
         "iso_3166-2": "ISO 3166-2:KP",
@@ -1050,7 +1049,7 @@
     },
     {
         "name": "South Korea",
-        "alpha-2": "KR",
+        "alpha": "KR",
         "alpha-3": "KOR",
         "country-code": "410",
         "iso_3166-2": "ISO 3166-2:KR",
@@ -1059,7 +1058,7 @@
     },
     {
         "name": "Kuwait",
-        "alpha-2": "KW",
+        "alpha": "KW",
         "alpha-3": "KWT",
         "country-code": "414",
         "iso_3166-2": "ISO 3166-2:KW",
@@ -1068,7 +1067,7 @@
     },
     {
         "name": "Kyrgyzstan",
-        "alpha-2": "KG",
+        "alpha": "KG",
         "alpha-3": "KGZ",
         "country-code": "417",
         "iso_3166-2": "ISO 3166-2:KG",
@@ -1077,7 +1076,7 @@
     },
     {
         "name": "Lao People's Democratic Republic",
-        "alpha-2": "LA",
+        "alpha": "LA",
         "alpha-3": "LAO",
         "country-code": "418",
         "iso_3166-2": "ISO 3166-2:LA",
@@ -1086,7 +1085,7 @@
     },
     {
         "name": "Latvia",
-        "alpha-2": "LV",
+        "alpha": "LV",
         "alpha-3": "LVA",
         "country-code": "428",
         "iso_3166-2": "ISO 3166-2:LV",
@@ -1095,7 +1094,7 @@
     },
     {
         "name": "Lebanon",
-        "alpha-2": "LB",
+        "alpha": "LB",
         "alpha-3": "LBN",
         "country-code": "422",
         "iso_3166-2": "ISO 3166-2:LB",
@@ -1104,7 +1103,7 @@
     },
     {
         "name": "Lesotho",
-        "alpha-2": "LS",
+        "alpha": "LS",
         "alpha-3": "LSO",
         "country-code": "426",
         "iso_3166-2": "ISO 3166-2:LS",
@@ -1113,7 +1112,7 @@
     },
     {
         "name": "Liberia",
-        "alpha-2": "LR",
+        "alpha": "LR",
         "alpha-3": "LBR",
         "country-code": "430",
         "iso_3166-2": "ISO 3166-2:LR",
@@ -1122,7 +1121,7 @@
     },
     {
         "name": "Libya",
-        "alpha-2": "LY",
+        "alpha": "LY",
         "alpha-3": "LBY",
         "country-code": "434",
         "iso_3166-2": "ISO 3166-2:LY",
@@ -1131,7 +1130,7 @@
     },
     {
         "name": "Liechtenstein",
-        "alpha-2": "LI",
+        "alpha": "LI",
         "alpha-3": "LIE",
         "country-code": "438",
         "iso_3166-2": "ISO 3166-2:LI",
@@ -1140,7 +1139,7 @@
     },
     {
         "name": "Lithuania",
-        "alpha-2": "LT",
+        "alpha": "LT",
         "alpha-3": "LTU",
         "country-code": "440",
         "iso_3166-2": "ISO 3166-2:LT",
@@ -1149,7 +1148,7 @@
     },
     {
         "name": "Luxembourg",
-        "alpha-2": "LU",
+        "alpha": "LU",
         "alpha-3": "LUX",
         "country-code": "442",
         "iso_3166-2": "ISO 3166-2:LU",
@@ -1158,7 +1157,7 @@
     },
     {
         "name": "Macao",
-        "alpha-2": "MO",
+        "alpha": "MO",
         "alpha-3": "MAC",
         "country-code": "446",
         "iso_3166-2": "ISO 3166-2:MO",
@@ -1167,7 +1166,7 @@
     },
     {
         "name": "Macedonia (the former Yugoslav Republic of)",
-        "alpha-2": "MK",
+        "alpha": "MK",
         "alpha-3": "MKD",
         "country-code": "807",
         "iso_3166-2": "ISO 3166-2:MK",
@@ -1176,7 +1175,7 @@
     },
     {
         "name": "Madagascar",
-        "alpha-2": "MG",
+        "alpha": "MG",
         "alpha-3": "MDG",
         "country-code": "450",
         "iso_3166-2": "ISO 3166-2:MG",
@@ -1185,7 +1184,7 @@
     },
     {
         "name": "Malawi",
-        "alpha-2": "MW",
+        "alpha": "MW",
         "alpha-3": "MWI",
         "country-code": "454",
         "iso_3166-2": "ISO 3166-2:MW",
@@ -1194,7 +1193,7 @@
     },
     {
         "name": "Malaysia",
-        "alpha-2": "MY",
+        "alpha": "MY",
         "alpha-3": "MYS",
         "country-code": "458",
         "iso_3166-2": "ISO 3166-2:MY",
@@ -1203,7 +1202,7 @@
     },
     {
         "name": "Maldives",
-        "alpha-2": "MV",
+        "alpha": "MV",
         "alpha-3": "MDV",
         "country-code": "462",
         "iso_3166-2": "ISO 3166-2:MV",
@@ -1212,7 +1211,7 @@
     },
     {
         "name": "Mali",
-        "alpha-2": "ML",
+        "alpha": "ML",
         "alpha-3": "MLI",
         "country-code": "466",
         "iso_3166-2": "ISO 3166-2:ML",
@@ -1221,7 +1220,7 @@
     },
     {
         "name": "Malta",
-        "alpha-2": "MT",
+        "alpha": "MT",
         "alpha-3": "MLT",
         "country-code": "470",
         "iso_3166-2": "ISO 3166-2:MT",
@@ -1230,7 +1229,7 @@
     },
     {
         "name": "Marshall Islands",
-        "alpha-2": "MH",
+        "alpha": "MH",
         "alpha-3": "MHL",
         "country-code": "584",
         "iso_3166-2": "ISO 3166-2:MH",
@@ -1239,7 +1238,7 @@
     },
     {
         "name": "Martinique",
-        "alpha-2": "MQ",
+        "alpha": "MQ",
         "alpha-3": "MTQ",
         "country-code": "474",
         "iso_3166-2": "ISO 3166-2:MQ",
@@ -1248,7 +1247,7 @@
     },
     {
         "name": "Mauritania",
-        "alpha-2": "MR",
+        "alpha": "MR",
         "alpha-3": "MRT",
         "country-code": "478",
         "iso_3166-2": "ISO 3166-2:MR",
@@ -1257,7 +1256,7 @@
     },
     {
         "name": "Mauritius",
-        "alpha-2": "MU",
+        "alpha": "MU",
         "alpha-3": "MUS",
         "country-code": "480",
         "iso_3166-2": "ISO 3166-2:MU",
@@ -1266,7 +1265,7 @@
     },
     {
         "name": "Mayotte",
-        "alpha-2": "YT",
+        "alpha": "YT",
         "alpha-3": "MYT",
         "country-code": "175",
         "iso_3166-2": "ISO 3166-2:YT",
@@ -1275,7 +1274,7 @@
     },
     {
         "name": "Mexico",
-        "alpha-2": "MX",
+        "alpha": "MX",
         "alpha-3": "MEX",
         "country-code": "484",
         "iso_3166-2": "ISO 3166-2:MX",
@@ -1284,7 +1283,7 @@
     },
     {
         "name": "Micronesia (Federated States of)",
-        "alpha-2": "FM",
+        "alpha": "FM",
         "alpha-3": "FSM",
         "country-code": "583",
         "iso_3166-2": "ISO 3166-2:FM",
@@ -1293,7 +1292,7 @@
     },
     {
         "name": "Moldova (Republic of)",
-        "alpha-2": "MD",
+        "alpha": "MD",
         "alpha-3": "MDA",
         "country-code": "498",
         "iso_3166-2": "ISO 3166-2:MD",
@@ -1302,7 +1301,7 @@
     },
     {
         "name": "Monaco",
-        "alpha-2": "MC",
+        "alpha": "MC",
         "alpha-3": "MCO",
         "country-code": "492",
         "iso_3166-2": "ISO 3166-2:MC",
@@ -1311,7 +1310,7 @@
     },
     {
         "name": "Mongolia",
-        "alpha-2": "MN",
+        "alpha": "MN",
         "alpha-3": "MNG",
         "country-code": "496",
         "iso_3166-2": "ISO 3166-2:MN",
@@ -1320,7 +1319,7 @@
     },
     {
         "name": "Montenegro",
-        "alpha-2": "ME",
+        "alpha": "ME",
         "alpha-3": "MNE",
         "country-code": "499",
         "iso_3166-2": "ISO 3166-2:ME",
@@ -1329,7 +1328,7 @@
     },
     {
         "name": "Montserrat",
-        "alpha-2": "MS",
+        "alpha": "MS",
         "alpha-3": "MSR",
         "country-code": "500",
         "iso_3166-2": "ISO 3166-2:MS",
@@ -1338,7 +1337,7 @@
     },
     {
         "name": "Morocco",
-        "alpha-2": "MA",
+        "alpha": "MA",
         "alpha-3": "MAR",
         "country-code": "504",
         "iso_3166-2": "ISO 3166-2:MA",
@@ -1347,7 +1346,7 @@
     },
     {
         "name": "Mozambique",
-        "alpha-2": "MZ",
+        "alpha": "MZ",
         "alpha-3": "MOZ",
         "country-code": "508",
         "iso_3166-2": "ISO 3166-2:MZ",
@@ -1356,7 +1355,7 @@
     },
     {
         "name": "Burma",
-        "alpha-2": "MM",
+        "alpha": "MM",
         "alpha-3": "MMR",
         "country-code": "104",
         "iso_3166-2": "ISO 3166-2:MM",
@@ -1365,7 +1364,7 @@
     },
     {
         "name": "Namibia",
-        "alpha-2": "NA",
+        "alpha": "NA",
         "alpha-3": "NAM",
         "country-code": "516",
         "iso_3166-2": "ISO 3166-2:NA",
@@ -1374,7 +1373,7 @@
     },
     {
         "name": "Nauru",
-        "alpha-2": "NR",
+        "alpha": "NR",
         "alpha-3": "NRU",
         "country-code": "520",
         "iso_3166-2": "ISO 3166-2:NR",
@@ -1383,7 +1382,7 @@
     },
     {
         "name": "Nepal",
-        "alpha-2": "NP",
+        "alpha": "NP",
         "alpha-3": "NPL",
         "country-code": "524",
         "iso_3166-2": "ISO 3166-2:NP",
@@ -1392,7 +1391,7 @@
     },
     {
         "name": "Netherlands",
-        "alpha-2": "NL",
+        "alpha": "NL",
         "alpha-3": "NLD",
         "country-code": "528",
         "iso_3166-2": "ISO 3166-2:NL",
@@ -1401,7 +1400,7 @@
     },
     {
         "name": "New Caledonia",
-        "alpha-2": "NC",
+        "alpha": "NC",
         "alpha-3": "NCL",
         "country-code": "540",
         "iso_3166-2": "ISO 3166-2:NC",
@@ -1410,7 +1409,7 @@
     },
     {
         "name": "New Zealand",
-        "alpha-2": "NZ",
+        "alpha": "NZ",
         "alpha-3": "NZL",
         "country-code": "554",
         "iso_3166-2": "ISO 3166-2:NZ",
@@ -1419,7 +1418,7 @@
     },
     {
         "name": "Nicaragua",
-        "alpha-2": "NI",
+        "alpha": "NI",
         "alpha-3": "NIC",
         "country-code": "558",
         "iso_3166-2": "ISO 3166-2:NI",
@@ -1428,7 +1427,7 @@
     },
     {
         "name": "Niger",
-        "alpha-2": "NE",
+        "alpha": "NE",
         "alpha-3": "NER",
         "country-code": "562",
         "iso_3166-2": "ISO 3166-2:NE",
@@ -1437,7 +1436,7 @@
     },
     {
         "name": "Nigeria",
-        "alpha-2": "NG",
+        "alpha": "NG",
         "alpha-3": "NGA",
         "country-code": "566",
         "iso_3166-2": "ISO 3166-2:NG",
@@ -1446,7 +1445,7 @@
     },
     {
         "name": "Niue",
-        "alpha-2": "NU",
+        "alpha": "NU",
         "alpha-3": "NIU",
         "country-code": "570",
         "iso_3166-2": "ISO 3166-2:NU",
@@ -1455,7 +1454,7 @@
     },
     {
         "name": "Norfolk Island",
-        "alpha-2": "NF",
+        "alpha": "NF",
         "alpha-3": "NFK",
         "country-code": "574",
         "iso_3166-2": "ISO 3166-2:NF",
@@ -1464,7 +1463,7 @@
     },
     {
         "name": "Northern Mariana Islands",
-        "alpha-2": "MP",
+        "alpha": "MP",
         "alpha-3": "MNP",
         "country-code": "580",
         "iso_3166-2": "ISO 3166-2:MP",
@@ -1473,7 +1472,7 @@
     },
     {
         "name": "Norway",
-        "alpha-2": "NO",
+        "alpha": "NO",
         "alpha-3": "NOR",
         "country-code": "578",
         "iso_3166-2": "ISO 3166-2:NO",
@@ -1482,7 +1481,7 @@
     },
     {
         "name": "Oman",
-        "alpha-2": "OM",
+        "alpha": "OM",
         "alpha-3": "OMN",
         "country-code": "512",
         "iso_3166-2": "ISO 3166-2:OM",
@@ -1491,7 +1490,7 @@
     },
     {
         "name": "Pakistan",
-        "alpha-2": "PK",
+        "alpha": "PK",
         "alpha-3": "PAK",
         "country-code": "586",
         "iso_3166-2": "ISO 3166-2:PK",
@@ -1500,7 +1499,7 @@
     },
     {
         "name": "Palau",
-        "alpha-2": "PW",
+        "alpha": "PW",
         "alpha-3": "PLW",
         "country-code": "585",
         "iso_3166-2": "ISO 3166-2:PW",
@@ -1509,7 +1508,7 @@
     },
     {
         "name": "Palestine, State of",
-        "alpha-2": "PS",
+        "alpha": "PS",
         "alpha-3": "PSE",
         "country-code": "275",
         "iso_3166-2": "ISO 3166-2:PS",
@@ -1518,7 +1517,7 @@
     },
     {
         "name": "Panama",
-        "alpha-2": "PA",
+        "alpha": "PA",
         "alpha-3": "PAN",
         "country-code": "591",
         "iso_3166-2": "ISO 3166-2:PA",
@@ -1527,7 +1526,7 @@
     },
     {
         "name": "Papua New Guinea",
-        "alpha-2": "PG",
+        "alpha": "PG",
         "alpha-3": "PNG",
         "country-code": "598",
         "iso_3166-2": "ISO 3166-2:PG",
@@ -1536,7 +1535,7 @@
     },
     {
         "name": "Paraguay",
-        "alpha-2": "PY",
+        "alpha": "PY",
         "alpha-3": "PRY",
         "country-code": "600",
         "iso_3166-2": "ISO 3166-2:PY",
@@ -1545,7 +1544,7 @@
     },
     {
         "name": "Peru",
-        "alpha-2": "PE",
+        "alpha": "PE",
         "alpha-3": "PER",
         "country-code": "604",
         "iso_3166-2": "ISO 3166-2:PE",
@@ -1554,7 +1553,7 @@
     },
     {
         "name": "Philippines",
-        "alpha-2": "PH",
+        "alpha": "PH",
         "alpha-3": "PHL",
         "country-code": "608",
         "iso_3166-2": "ISO 3166-2:PH",
@@ -1563,7 +1562,7 @@
     },
     {
         "name": "Pitcairn",
-        "alpha-2": "PN",
+        "alpha": "PN",
         "alpha-3": "PCN",
         "country-code": "612",
         "iso_3166-2": "ISO 3166-2:PN",
@@ -1572,7 +1571,7 @@
     },
     {
         "name": "Poland",
-        "alpha-2": "PL",
+        "alpha": "PL",
         "alpha-3": "POL",
         "country-code": "616",
         "iso_3166-2": "ISO 3166-2:PL",
@@ -1581,7 +1580,7 @@
     },
     {
         "name": "Portugal",
-        "alpha-2": "PT",
+        "alpha": "PT",
         "alpha-3": "PRT",
         "country-code": "620",
         "iso_3166-2": "ISO 3166-2:PT",
@@ -1590,7 +1589,7 @@
     },
     {
         "name": "Puerto Rico",
-        "alpha-2": "PR",
+        "alpha": "PR",
         "alpha-3": "PRI",
         "country-code": "630",
         "iso_3166-2": "ISO 3166-2:PR",
@@ -1599,7 +1598,7 @@
     },
     {
         "name": "Qatar",
-        "alpha-2": "QA",
+        "alpha": "QA",
         "alpha-3": "QAT",
         "country-code": "634",
         "iso_3166-2": "ISO 3166-2:QA",
@@ -1608,7 +1607,7 @@
     },
     {
         "name": "Réunion",
-        "alpha-2": "RE",
+        "alpha": "RE",
         "alpha-3": "REU",
         "country-code": "638",
         "iso_3166-2": "ISO 3166-2:RE",
@@ -1617,7 +1616,7 @@
     },
     {
         "name": "Romania",
-        "alpha-2": "RO",
+        "alpha": "RO",
         "alpha-3": "ROU",
         "country-code": "642",
         "iso_3166-2": "ISO 3166-2:RO",
@@ -1626,7 +1625,7 @@
     },
     {
         "name": "Russia",
-        "alpha-2": "RU",
+        "alpha": "RU",
         "alpha-3": "RUS",
         "country-code": "643",
         "iso_3166-2": "ISO 3166-2:RU",
@@ -1635,7 +1634,7 @@
     },
     {
         "name": "Rwanda",
-        "alpha-2": "RW",
+        "alpha": "RW",
         "alpha-3": "RWA",
         "country-code": "646",
         "iso_3166-2": "ISO 3166-2:RW",
@@ -1644,7 +1643,7 @@
     },
     {
         "name": "Saint Barthélemy",
-        "alpha-2": "BL",
+        "alpha": "BL",
         "alpha-3": "BLM",
         "country-code": "652",
         "iso_3166-2": "ISO 3166-2:BL",
@@ -1653,7 +1652,7 @@
     },
     {
         "name": "Saint Helena, Ascension and Tristan da Cunha",
-        "alpha-2": "SH",
+        "alpha": "SH",
         "alpha-3": "SHN",
         "country-code": "654",
         "iso_3166-2": "ISO 3166-2:SH",
@@ -1662,7 +1661,7 @@
     },
     {
         "name": "Saint Kitts and Nevis",
-        "alpha-2": "KN",
+        "alpha": "KN",
         "alpha-3": "KNA",
         "country-code": "659",
         "iso_3166-2": "ISO 3166-2:KN",
@@ -1671,7 +1670,7 @@
     },
     {
         "name": "Saint Lucia",
-        "alpha-2": "LC",
+        "alpha": "LC",
         "alpha-3": "LCA",
         "country-code": "662",
         "iso_3166-2": "ISO 3166-2:LC",
@@ -1680,7 +1679,7 @@
     },
     {
         "name": "Saint Martin (French part)",
-        "alpha-2": "MF",
+        "alpha": "MF",
         "alpha-3": "MAF",
         "country-code": "663",
         "iso_3166-2": "ISO 3166-2:MF",
@@ -1689,7 +1688,7 @@
     },
     {
         "name": "Saint Pierre and Miquelon",
-        "alpha-2": "PM",
+        "alpha": "PM",
         "alpha-3": "SPM",
         "country-code": "666",
         "iso_3166-2": "ISO 3166-2:PM",
@@ -1698,7 +1697,7 @@
     },
     {
         "name": "Saint Vincent and the Grenadines",
-        "alpha-2": "VC",
+        "alpha": "VC",
         "alpha-3": "VCT",
         "country-code": "670",
         "iso_3166-2": "ISO 3166-2:VC",
@@ -1707,7 +1706,7 @@
     },
     {
         "name": "Samoa",
-        "alpha-2": "WS",
+        "alpha": "WS",
         "alpha-3": "WSM",
         "country-code": "882",
         "iso_3166-2": "ISO 3166-2:WS",
@@ -1716,7 +1715,7 @@
     },
     {
         "name": "San Marino",
-        "alpha-2": "SM",
+        "alpha": "SM",
         "alpha-3": "SMR",
         "country-code": "674",
         "iso_3166-2": "ISO 3166-2:SM",
@@ -1725,7 +1724,7 @@
     },
     {
         "name": "Sao Tome and Principe",
-        "alpha-2": "ST",
+        "alpha": "ST",
         "alpha-3": "STP",
         "country-code": "678",
         "iso_3166-2": "ISO 3166-2:ST",
@@ -1734,7 +1733,7 @@
     },
     {
         "name": "Saudi Arabia",
-        "alpha-2": "SA",
+        "alpha": "SA",
         "alpha-3": "SAU",
         "country-code": "682",
         "iso_3166-2": "ISO 3166-2:SA",
@@ -1743,7 +1742,7 @@
     },
     {
         "name": "Senegal",
-        "alpha-2": "SN",
+        "alpha": "SN",
         "alpha-3": "SEN",
         "country-code": "686",
         "iso_3166-2": "ISO 3166-2:SN",
@@ -1752,7 +1751,7 @@
     },
     {
         "name": "Serbia",
-        "alpha-2": "RS",
+        "alpha": "RS",
         "alpha-3": "SRB",
         "country-code": "688",
         "iso_3166-2": "ISO 3166-2:RS",
@@ -1761,7 +1760,7 @@
     },
     {
         "name": "Seychelles",
-        "alpha-2": "SC",
+        "alpha": "SC",
         "alpha-3": "SYC",
         "country-code": "690",
         "iso_3166-2": "ISO 3166-2:SC",
@@ -1770,7 +1769,7 @@
     },
     {
         "name": "Sierra Leone",
-        "alpha-2": "SL",
+        "alpha": "SL",
         "alpha-3": "SLE",
         "country-code": "694",
         "iso_3166-2": "ISO 3166-2:SL",
@@ -1779,7 +1778,7 @@
     },
     {
         "name": "Singapore",
-        "alpha-2": "SG",
+        "alpha": "SG",
         "alpha-3": "SGP",
         "country-code": "702",
         "iso_3166-2": "ISO 3166-2:SG",
@@ -1788,7 +1787,7 @@
     },
     {
         "name": "Sint Maarten (Dutch part)",
-        "alpha-2": "SX",
+        "alpha": "SX",
         "alpha-3": "SXM",
         "country-code": "534",
         "iso_3166-2": "ISO 3166-2:SX",
@@ -1797,7 +1796,7 @@
     },
     {
         "name": "Slovakia",
-        "alpha-2": "SK",
+        "alpha": "SK",
         "alpha-3": "SVK",
         "country-code": "703",
         "iso_3166-2": "ISO 3166-2:SK",
@@ -1806,7 +1805,7 @@
     },
     {
         "name": "Slovenia",
-        "alpha-2": "SI",
+        "alpha": "SI",
         "alpha-3": "SVN",
         "country-code": "705",
         "iso_3166-2": "ISO 3166-2:SI",
@@ -1815,7 +1814,7 @@
     },
     {
         "name": "Solomon Islands",
-        "alpha-2": "SB",
+        "alpha": "SB",
         "alpha-3": "SLB",
         "country-code": "90",
         "iso_3166-2": "ISO 3166-2:SB",
@@ -1824,7 +1823,7 @@
     },
     {
         "name": "Somalia",
-        "alpha-2": "SO",
+        "alpha": "SO",
         "alpha-3": "SOM",
         "country-code": "706",
         "iso_3166-2": "ISO 3166-2:SO",
@@ -1833,7 +1832,7 @@
     },
     {
         "name": "South Africa",
-        "alpha-2": "ZA",
+        "alpha": "ZA",
         "alpha-3": "ZAF",
         "country-code": "710",
         "iso_3166-2": "ISO 3166-2:ZA",
@@ -1842,14 +1841,14 @@
     },
     {
         "name": "South Georgia and the South Sandwich Islands",
-        "alpha-2": "GS",
+        "alpha": "GS",
         "alpha-3": "SGS",
         "country-code": "239",
         "iso_3166-2": "ISO 3166-2:GS"
     },
     {
         "name": "South Sudan",
-        "alpha-2": "SS",
+        "alpha": "SS",
         "alpha-3": "SSD",
         "country-code": "728",
         "iso_3166-2": "ISO 3166-2:SS",
@@ -1858,7 +1857,7 @@
     },
     {
         "name": "Spain",
-        "alpha-2": "ES",
+        "alpha": "ES",
         "alpha-3": "ESP",
         "country-code": "724",
         "iso_3166-2": "ISO 3166-2:ES",
@@ -1867,7 +1866,7 @@
     },
     {
         "name": "Sri Lanka",
-        "alpha-2": "LK",
+        "alpha": "LK",
         "alpha-3": "LKA",
         "country-code": "144",
         "iso_3166-2": "ISO 3166-2:LK",
@@ -1876,7 +1875,7 @@
     },
     {
         "name": "Sudan",
-        "alpha-2": "SD",
+        "alpha": "SD",
         "alpha-3": "SDN",
         "country-code": "729",
         "iso_3166-2": "ISO 3166-2:SD",
@@ -1885,7 +1884,7 @@
     },
     {
         "name": "Suriname",
-        "alpha-2": "SR",
+        "alpha": "SR",
         "alpha-3": "SUR",
         "country-code": "740",
         "iso_3166-2": "ISO 3166-2:SR",
@@ -1894,7 +1893,7 @@
     },
     {
         "name": "Svalbard and Jan Mayen",
-        "alpha-2": "SJ",
+        "alpha": "SJ",
         "alpha-3": "SJM",
         "country-code": "744",
         "iso_3166-2": "ISO 3166-2:SJ",
@@ -1903,7 +1902,7 @@
     },
     {
         "name": "Swaziland",
-        "alpha-2": "SZ",
+        "alpha": "SZ",
         "alpha-3": "SWZ",
         "country-code": "748",
         "iso_3166-2": "ISO 3166-2:SZ",
@@ -1912,7 +1911,7 @@
     },
     {
         "name": "Sweden",
-        "alpha-2": "SE",
+        "alpha": "SE",
         "alpha-3": "SWE",
         "country-code": "752",
         "iso_3166-2": "ISO 3166-2:SE",
@@ -1921,7 +1920,7 @@
     },
     {
         "name": "Switzerland",
-        "alpha-2": "CH",
+        "alpha": "CH",
         "alpha-3": "CHE",
         "country-code": "756",
         "iso_3166-2": "ISO 3166-2:CH",
@@ -1930,7 +1929,7 @@
     },
     {
         "name": "Syria",
-        "alpha-2": "SY",
+        "alpha": "SY",
         "alpha-3": "SYR",
         "country-code": "760",
         "iso_3166-2": "ISO 3166-2:SY",
@@ -1939,7 +1938,7 @@
     },
     {
         "name": "Taiwan",
-        "alpha-2": "TW",
+        "alpha": "TW",
         "alpha-3": "TWN",
         "country-code": "158",
         "iso_3166-2": "ISO 3166-2:TW",
@@ -1948,7 +1947,7 @@
     },
     {
         "name": "Tajikistan",
-        "alpha-2": "TJ",
+        "alpha": "TJ",
         "alpha-3": "TJK",
         "country-code": "762",
         "iso_3166-2": "ISO 3166-2:TJ",
@@ -1957,7 +1956,7 @@
     },
     {
         "name": "Tanzania, United Republic of",
-        "alpha-2": "TZ",
+        "alpha": "TZ",
         "alpha-3": "TZA",
         "country-code": "834",
         "iso_3166-2": "ISO 3166-2:TZ",
@@ -1966,7 +1965,7 @@
     },
     {
         "name": "Thailand",
-        "alpha-2": "TH",
+        "alpha": "TH",
         "alpha-3": "THA",
         "country-code": "764",
         "iso_3166-2": "ISO 3166-2:TH",
@@ -1975,7 +1974,7 @@
     },
     {
         "name": "Timor-Leste",
-        "alpha-2": "TL",
+        "alpha": "TL",
         "alpha-3": "TLS",
         "country-code": "626",
         "iso_3166-2": "ISO 3166-2:TL",
@@ -1984,7 +1983,7 @@
     },
     {
         "name": "Togo",
-        "alpha-2": "TG",
+        "alpha": "TG",
         "alpha-3": "TGO",
         "country-code": "768",
         "iso_3166-2": "ISO 3166-2:TG",
@@ -1993,7 +1992,7 @@
     },
     {
         "name": "Tokelau",
-        "alpha-2": "TK",
+        "alpha": "TK",
         "alpha-3": "TKL",
         "country-code": "772",
         "iso_3166-2": "ISO 3166-2:TK",
@@ -2002,7 +2001,7 @@
     },
     {
         "name": "Tonga",
-        "alpha-2": "TO",
+        "alpha": "TO",
         "alpha-3": "TON",
         "country-code": "776",
         "iso_3166-2": "ISO 3166-2:TO",
@@ -2011,7 +2010,7 @@
     },
     {
         "name": "Trinidad and Tobago",
-        "alpha-2": "TT",
+        "alpha": "TT",
         "alpha-3": "TTO",
         "country-code": "780",
         "iso_3166-2": "ISO 3166-2:TT",
@@ -2020,7 +2019,7 @@
     },
     {
         "name": "Tunisia",
-        "alpha-2": "TN",
+        "alpha": "TN",
         "alpha-3": "TUN",
         "country-code": "788",
         "iso_3166-2": "ISO 3166-2:TN",
@@ -2029,7 +2028,7 @@
     },
     {
         "name": "Turkey",
-        "alpha-2": "TR",
+        "alpha": "TR",
         "alpha-3": "TUR",
         "country-code": "792",
         "iso_3166-2": "ISO 3166-2:TR",
@@ -2038,7 +2037,7 @@
     },
     {
         "name": "Turkmenistan",
-        "alpha-2": "TM",
+        "alpha": "TM",
         "alpha-3": "TKM",
         "country-code": "795",
         "iso_3166-2": "ISO 3166-2:TM",
@@ -2047,7 +2046,7 @@
     },
     {
         "name": "Turks and Caicos Islands",
-        "alpha-2": "TC",
+        "alpha": "TC",
         "alpha-3": "TCA",
         "country-code": "796",
         "iso_3166-2": "ISO 3166-2:TC",
@@ -2056,7 +2055,7 @@
     },
     {
         "name": "Tuvalu",
-        "alpha-2": "TV",
+        "alpha": "TV",
         "alpha-3": "TUV",
         "country-code": "798",
         "iso_3166-2": "ISO 3166-2:TV",
@@ -2065,7 +2064,7 @@
     },
     {
         "name": "Uganda",
-        "alpha-2": "UG",
+        "alpha": "UG",
         "alpha-3": "UGA",
         "country-code": "800",
         "iso_3166-2": "ISO 3166-2:UG",
@@ -2074,7 +2073,7 @@
     },
     {
         "name": "Ukraine",
-        "alpha-2": "UA",
+        "alpha": "UA",
         "alpha-3": "UKR",
         "country-code": "804",
         "iso_3166-2": "ISO 3166-2:UA",
@@ -2083,7 +2082,7 @@
     },
     {
         "name": "United Arab Emirates",
-        "alpha-2": "AE",
+        "alpha": "AE",
         "alpha-3": "ARE",
         "country-code": "784",
         "iso_3166-2": "ISO 3166-2:AE",
@@ -2092,7 +2091,7 @@
     },
     {
         "name": "United Kingdom",
-        "alpha-2": "GB",
+        "alpha": "GB",
         "alpha-3": "GBR",
         "country-code": "826",
         "iso_3166-2": "ISO 3166-2:GB",
@@ -2101,7 +2100,7 @@
     },
     {
         "name": "United States",
-        "alpha-2": "US",
+        "alpha": "US",
         "alpha-3": "USA",
         "country-code": "840",
         "iso_3166-2": "ISO 3166-2:US",
@@ -2110,14 +2109,14 @@
     },
     {
         "name": "United States Minor Outlying Islands",
-        "alpha-2": "UM",
+        "alpha": "UM",
         "alpha-3": "UMI",
         "country-code": "581",
         "iso_3166-2": "ISO 3166-2:UM"
     },
     {
         "name": "Uruguay",
-        "alpha-2": "UY",
+        "alpha": "UY",
         "alpha-3": "URY",
         "country-code": "858",
         "iso_3166-2": "ISO 3166-2:UY",
@@ -2126,7 +2125,7 @@
     },
     {
         "name": "Uzbekistan",
-        "alpha-2": "UZ",
+        "alpha": "UZ",
         "alpha-3": "UZB",
         "country-code": "860",
         "iso_3166-2": "ISO 3166-2:UZ",
@@ -2135,7 +2134,7 @@
     },
     {
         "name": "Vanuatu",
-        "alpha-2": "VU",
+        "alpha": "VU",
         "alpha-3": "VUT",
         "country-code": "548",
         "iso_3166-2": "ISO 3166-2:VU",
@@ -2144,7 +2143,7 @@
     },
     {
         "name": "Venezuela",
-        "alpha-2": "VE",
+        "alpha": "VE",
         "alpha-3": "VEN",
         "country-code": "862",
         "iso_3166-2": "ISO 3166-2:VE",
@@ -2153,7 +2152,7 @@
     },
     {
         "name": "Vietnam",
-        "alpha-2": "VN",
+        "alpha": "VN",
         "alpha-3": "VNM",
         "country-code": "704",
         "iso_3166-2": "ISO 3166-2:VN",
@@ -2162,7 +2161,7 @@
     },
     {
         "name": "Virgin Islands (British)",
-        "alpha-2": "VG",
+        "alpha": "VG",
         "alpha-3": "VGB",
         "country-code": "92",
         "iso_3166-2": "ISO 3166-2:VG",
@@ -2171,7 +2170,7 @@
     },
     {
         "name": "Virgin Islands (U.S.)",
-        "alpha-2": "VI",
+        "alpha": "VI",
         "alpha-3": "VIR",
         "country-code": "850",
         "iso_3166-2": "ISO 3166-2:VI",
@@ -2180,7 +2179,7 @@
     },
     {
         "name": "Wallis and Futuna",
-        "alpha-2": "WF",
+        "alpha": "WF",
         "alpha-3": "WLF",
         "country-code": "876",
         "iso_3166-2": "ISO 3166-2:WF",
@@ -2189,7 +2188,7 @@
     },
     {
         "name": "Western Sahara",
-        "alpha-2": "EH",
+        "alpha": "EH",
         "alpha-3": "ESH",
         "country-code": "732",
         "iso_3166-2": "ISO 3166-2:EH",
@@ -2198,7 +2197,7 @@
     },
     {
         "name": "Yemen",
-        "alpha-2": "YE",
+        "alpha": "YE",
         "alpha-3": "YEM",
         "country-code": "887",
         "iso_3166-2": "ISO 3166-2:YE",
@@ -2207,7 +2206,7 @@
     },
     {
         "name": "Zambia",
-        "alpha-2": "ZM",
+        "alpha": "ZM",
         "alpha-3": "ZMB",
         "country-code": "894",
         "iso_3166-2": "ISO 3166-2:ZM",
@@ -2216,12 +2215,13 @@
     },
     {
         "name": "Zimbabwe",
-        "alpha-2": "ZW",
+        "alpha": "ZW",
         "alpha-3": "ZWE",
         "country-code": "716",
         "iso_3166-2": "ISO 3166-2:ZW",
         "region": "Africa",
         "sub-region": "Eastern Africa"
     }
-  ]
-}
+]
+
+module.exports = countriesData;
