@@ -1,5 +1,4 @@
-{
-  deaths: [
+  deathsData = [
     {
       "country": "Abania",
       "date": "11/20/14",
@@ -35461,4 +35460,3 @@
       "cause.of.death": "Veh. Accid-Other"
     }
   ]
-}
