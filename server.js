@@ -79,6 +79,34 @@ app.post('/api/v1/countries', (request, response) => {
     })
 })
 
+app.post('/api/v1/countries/:countryId/deaths', (request, response) => {
+  const death = request.body;
+  const { countryId } = request.params;
+  for (let requiredParameter of ['date', 'cause_of_death']) {
+    if (!death[requiredParameter]) {
+      return response.status(422).send({ error: `Expected format: { date: <String>, cause_of_death: <String> }.  You're missing a ${requiredParameter} property.`})
+    }
+  }
+
+  const deathToAdd = {
+    country_id: countryId,
+    date: death.date,
+    cause_of_death: death.cause_of_death
+  }
+
+  database('deaths').insert(deathToAdd, 'id')
+    .then(deathId => {
+      response.status(201).json(death)
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    }) 
+})
+
+
+
+
+
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
