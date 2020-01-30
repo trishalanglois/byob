@@ -52,14 +52,16 @@ app.get('/api/v1/countries/:id/deaths/:deathId', async (request, response) => {
 app.delete('/api/v1/countries/:id/deaths/:deathId', async (request,response) => {
   const { id } = request.params;
   const { deathId } = request.params;
+
   const deaths = await database('deaths').select();
   const death = deaths.find(death => death.id === parseInt(deathId));
   const remainingDeaths = deaths.filter(death => death.id !== parseInt(deathId));
   const remainingDeathsByCountry = remainingDeaths.filter(death => death.country_id === parseInt(id))
+  
+  await database('deaths').where('id', deathId).del();
 
   death ? response.status(200).json({ remainingDeathsByCountry }) : response.status(400).json({ error: `Unable to find a death that with an ID of ${deathId}. Please choose another death.` });
 
-  app.locals.deaths = remainingDeaths;
 })
 
 app.post('/api/v1/countries', (request, response) => {
