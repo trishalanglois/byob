@@ -57,9 +57,26 @@ app.delete('/api/v1/countries/:id/deaths/:deathId', async (request,response) => 
   const remainingDeaths = deaths.filter(death => death.id !== parseInt(deathId));
   const remainingDeathsByCountry = remainingDeaths.filter(death => death.country_id === parseInt(id))
 
-  death ? response.status(200).json({ remainingDeathsByCountry }) : response.status(400).json({ error: `Unable to find a death that matches ${deathId}. Please choose another death.` });
-  
+  death ? response.status(200).json({ remainingDeathsByCountry }) : response.status(400).json({ error: `Unable to find a death that with an ID of ${deathId}. Please choose another death.` });
+
   app.locals.deaths = remainingDeaths;
+})
+
+app.post('/api/v1/countries', (request, response) => {
+  const country = request.body;
+  for (let requiredParameter of ['country_abbrev', 'country_name']) {
+    if (!country[requiredParameter]) {
+      return response.status(422).send({ error: `Expected format: { country_abbrev: <String>, country_name: <String>}.  You're missing a ${requiredParameter} property.`})
+    }
+  }
+
+  database('countries').insert(country, 'id')
+    .then(countryId => {
+      response.status(201).json(country)
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
 })
 
 
