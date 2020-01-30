@@ -31,7 +31,6 @@ app.get('/api/v1/countries/:id', async (request, response) => {
   country ? response.status(200).json(country) : response.status(404).json({ error: `Unable to find a country with the id of ${id}.  Please try again.`})
 })
 
-//get deaths for a given country
 app.get('/api/v1/countries/:id/deaths', async (request, response) => {
   const { id } = request.params;
   const countries = await database('countries').select();
@@ -43,6 +42,16 @@ app.get('/api/v1/countries/:id/deaths', async (request, response) => {
 })
 
 //get specific death for a given country
+app.get('/api/v1/countries/:id/deaths/:deathId', async (request, response) => {
+  const { id } = request.params;
+  const { deathId } = request.params;
+  const countries = await database('countries').select();
+  const country = countries.find(country => country.id === parseInt(id));
+  const deaths = await database('deaths').select();
+  const chosenDeath = deaths.find(death => death.id === parseInt(deathId));
+
+  country && chosenDeath ? response.status(200).json(chosenDeath) : response.status(400).json( { error: `Unable to find a death that matches id ${deathId}. Please choose another death.`})
+})
 
 
 
