@@ -1,6 +1,16 @@
 # Build Your Own Backend - American Deaths Abroad
 
-Build Your Own Backend takes data from two separate databases - countries and deaths in said countries - and combines them into one dataset.  From there, the data is seeded into two separate tables, which are used for endpoints that a frontend user can hit in order to gather and display the data.
+## Description
+
+Build Your Own Backend is a backend project that takes data from two separate databases - countries and deaths in said countries - and combines them into one dataset.  From there, the data is seeded into two separate tables, which are used for endpoints that a frontend user can hit in order to gather and display the data.
+
+## Tech Stack
+* Node.js 
+* Express 
+* Knex 
+* PostgreSQL 
+
+This app is also [deployed to Heroku](https://byob-death.herokuapp.com/api/v1/countries).  Use the following endpoints listed in the `Endpoints` section of this README to view additional data.
 
 ## Setup
 
@@ -11,7 +21,7 @@ The server will run on `http://localhost:3000`. All endpoints are prefixed with 
 
 ## Data Model
 
-A country is stored on the server has an `id`, `country_abbrev`, `name`, `created_at` and `updated_at`. `id`, `created_at` and `updated_at` are automatically created when an object is greated.  Here is a sample country order object:
+A country is stored on the server and has an `id`, `country_abbrev`, `name`, `created_at` and `updated_at`. `id`, `created_at` and `updated_at` are automatically created when an object is created.  Here is a sample country object:
 
 ```js
 {
@@ -22,6 +32,21 @@ A country is stored on the server has an `id`, `country_abbrev`, `name`, `create
   updated_at: "2020-01-29T23:32:33.555Z"
 }
 ```
+
+A death is stored on the server and has an `id`, `date`, `cause_of_death`, `country_id` that refers back to the country it belongs to, `created_at` and `updated_at`.  `id`, `country_id`, `created_at`, `updated_at` are all automatically created when a user creates a death.  Here is a sample death object:
+
+```js 
+{
+  id: 5777,
+  date: "4/29/13",
+  cause_of_death: "Air Accident",
+  country_id: 5501,
+  created_at: "2020-01-29T23:32:33.818Z",
+  updated_at: "2020-01-29T23:32:33.818Z"
+}
+```
+
+The countries are stored in one table, and the deaths are stored in another table on the server.  The data structure is set up with a one to many relationship, with a country holding many deaths (but each death only belonging to one country).
 
 ## Endpoints
 
@@ -41,4 +66,13 @@ There are two sets of endpoints, as follows:
 | Get specific death in a country | `/api/v1/countries/:id/deaths/:id` | GET | N/A | Specific death: `{id: 11455, date: "7/14/13", cause_of_death: "Homicide", country_id: 5738, created_at: "2020-01-29T23:32:36.101Z", updated_at: "2020-01-29T23:32:36.101Z"}` |
 | Create a death | `/api/v1/countries/:id/deaths` | POST | `{date: "7/14/13", cause_of_death: "Drank too many Croix Boyz"}` | `{date: "7/14/13", cause_of_death: "Drank too many Croix Boyz"}` |
 | Delete existing death |`/api/v1/countries/:id/deaths/:id`| DELETE | N/A | All remaining deaths for that country: `{ remainingDeathsByCountry: [{}, {}...] }` |
+
+## Project Spec 
+This was a solo project completed over the course of one week at Turing School of Software and Design.
+
+[The project spec can be found here.](https://frontend.turing.io/projects/build-your-own-backend.html)
+
+
+
+
 
