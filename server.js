@@ -1,18 +1,25 @@
+//brings in the express framework to use with Node
 const express = require('express');
+//creates our app
 const app = express();
-
+//creates the development that we'll use to run -- either for production (Heroku) or development
 const environment = process.env.NODE_ENV || 'development';
+//uses the .knexfile to determine the environment that we're going to use -- either production or development.  Also links the other things in our knexfile like migration and seed directories that will store those files when they're run
 const configuration = require('./knexfile')[environment];
+//creates our database using postgreSQL
 const database = require('knex')(configuration);
-
+//JSONs our app, which will be important for readability when we start adding things to our database through POST
 app.use(express.json())
-
+//creates the port where we're running our app -- either the production environment that we determined in our knexfile or on port 3000 when we're running it locally
 app.set('port', process.env.PORT || 3000);
+//creates the title of our database
 app.locals.title = 'BYOB';
-
+//creates a response body when you go to this url path
 app.get('/', (request, response) => {
+  //the response body when you go to this url path is this string
   response.send('Oh hey BYOB');
 });
+
 
 app.get('/api/v1/countries', async (request, response) =>  {
   try {
