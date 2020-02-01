@@ -68,7 +68,7 @@ app.get('/api/v1/countries/:id/deaths', async (request, response) => {
 app.get('/api/v1/countries/:id/deaths/:deathId', async (request, response) => {
   // uses the id from the GET request and sets a variable for the id of that death being requested
   const { deathId } = request.params;
-    //go into the database and find the table called 'deaths'.  Save that to the variable 'deaths', which will hold all the deaths
+  //go into the database and find the table called 'deaths'.  Save that to the variable 'deaths', which will hold all the deaths
   const deaths = await database('deaths').select();
   //iterate through all the deaths from the database and finds the one that matches, based on the id from the GET request and the id being stored for the death in the database
   const chosenDeath = deaths.find(death => death.id === parseInt(deathId));
@@ -76,17 +76,23 @@ app.get('/api/v1/countries/:id/deaths/:deathId', async (request, response) => {
   chosenDeath ? response.status(200).json(chosenDeath) : response.status(400).json( { error: `Unable to find a death that matches id ${deathId}. Please choose another death.`})
 })
 
+//sets up the url and the overall function that is going to be deleting an entry when called.  Also declared that this is going to be an async function
 app.delete('/api/v1/countries/:id/deaths/:deathId', async (request,response) => {
+  //destructure the request to pull out the id and set that to a variable called "id"
   const { id } = request.params;
+    // uses the id from the DELETE request and sets a variable for the id of that death being requested
   const { deathId } = request.params;
-
+  //go into the database and find the table called 'deaths'.  Save that to the variable 'deaths', which will hold all the deaths
   const deaths = await database('deaths').select();
+  //iterates through all the deaths from the databse and finds the death that matches the id, given the id used from the DELETE request.  Returns the death that matches the deathId from the DELETE request.
   const death = deaths.find(death => death.id === parseInt(deathId));
+  //iterates through all the deaths and returns all the deaths that DO NOT match the deadId being used from the DELETE request.
   const remainingDeaths = deaths.filter(death => death.id !== parseInt(deathId));
+  //iterates through all the deaths that did not match the deathId used in the DELETE request and only returns the ones that have an id that matches the country id (just called id) from the DELETE request
   const remainingDeathsByCountry = remainingDeaths.filter(death => death.country_id === parseInt(id))
-  
+  //goes into the deaths database, goes to the id column, finds the one that matches the deathId used from the DELETE request, and deletes that row, thus deleting that death from the database.
   await database('deaths').where('id', deathId).del();
-
+  //checks to see if there was a death in this request, and if so, sets a successful status of 200, returning an array of the remaining deaths for the country being used in the DELETE request.  If there is not a death that was correctly found, will set an error status of 400, indicating that there was a user error, and returning an error object with a message saying that a death was not found with the id being used for the DELETE request.
   death ? response.status(200).json({ remainingDeathsByCountry }) : response.status(400).json({ error: `Unable to find a death that with an ID of ${deathId}. Please choose another death.` });
 
 })
