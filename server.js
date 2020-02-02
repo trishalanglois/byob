@@ -161,15 +161,21 @@ app.post('/api/v1/countries/:countryId/deaths', (request, response) => {
     }) 
 })
 
+//sets up a default get request if the url does not match any of the ones previously listed in this file
 app.get('*', (request, response) => {
+  //sets the response status to an error of 404 and sends the string of 404: Not found
   response.status(404).send('404: Not found');
 });
 
+//sets up a default delete request if the url does not match any of the ones previously listed in this file
 app.delete('*', (request, response) => {
+  //sets the response status to an error of 404 and sends the string of 404: Not found
   response.status(404).send('404: Not found');
 });
 
+//sets up a default post request if the url does not match any of the ones previously listed in this file
 app.post('*', (request, response) => {
+  //sets the response status to an error of 404 and sends the string of 404: Not found
   response.status(404).send('404: Not found');
 });
 
