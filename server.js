@@ -105,10 +105,11 @@ app.post('/api/v1/countries/:countryId/deaths', (request, response) => {
     }) 
 })
 
-
-
-
-
+app.get('*', (request, response) => {
+  response
+    .status(404)
+    .send('404: Not found');
+});
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
