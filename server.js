@@ -94,55 +94,75 @@ app.delete('/api/v1/countries/:id/deaths/:deathId', async (request,response) => 
   await database('deaths').where('id', deathId).del();
   //checks to see if there was a death in this request, and if so, sets a successful status of 200, returning an array of the remaining deaths for the country being used in the DELETE request.  If there is not a death that was correctly found, will set an error status of 400, indicating that there was a user error, and returning an error object with a message saying that a death was not found with the id being used for the DELETE request.
   death ? response.status(200).json({ remainingDeathsByCountry }) : response.status(400).json({ error: `Unable to find a death that with an ID of ${deathId}. Please choose another death.` });
-
 })
 
+//sets up the url and the overall function that is going to add a response to the database when it's called
 app.post('/api/v1/countries', (request, response) => {
+  //creates a variable called 'country' with the value being the body of the response object that a user will send in via some sort of event
   const country = request.body;
+  // declares that there are two required parameters in the response body -- country_abbrev and country_name and stores their specific values in requiredParameter
   for (let requiredParameter of ['country_abbrev', 'country_name']) {
+    // if one of the requiredParameters is missing, it will trigger this conditional
     if (!country[requiredParameter]) {
+      //sets an error status 422 and sends a response that is an error object with the message that will tell the user which of the requiredParameters they're missing
       return response.status(422).send({ error: `Expected format: { country_abbrev: <String>, country_name: <String>}.  You're missing a ${requiredParameter} property.`})
     }
   }
 
+  //goes into the database, finds the one called 'country', then inserts a new entry -- the first argument (country, which is the request object being stored in the variable earlier) is what we are giving the .insert() method, and the second ('id', which matches one of the columns in the table) is what it will return.  In this case, we will be giving it the country, and we will be receiving the id of said country from .insert()
   database('countries').insert(country, 'id')
-    .then(countryId => {
+  // after .insert() is complete, and if there was a successful return of an id, the .then will run
+  .then(countryId => {
+    // after we receive the id from the country, we are going to set the successful response status, and the response body will be the country that the user originally had in their request body
       response.status(201).json(country)
     })
+    // if the .insert() was unsuccessful and does not return the id, the .catch() will run, indicating there was an error
     .catch(error => {
+      // the .catch will set an error status of 500, returning the error object to the user
       response.status(500).json({ error })
     })
 })
 
+//sets up the url and the overall function that is going to add a response to the database when it's called
 app.post('/api/v1/countries/:countryId/deaths', (request, response) => {
+  //creates a variable called 'death' with the value being the body of the response object that a user will send in via some sort of event
   const death = request.body;
+  //creates the countryId variable from the user's request, which will later be used in creating the death variable that will be added
   const { countryId } = request.params;
+  // declares that there are two required parameters in the response body -- date and cause_of_death and stores their specific values in requiredParameter
   for (let requiredParameter of ['date', 'cause_of_death']) {
+      // if one of the requiredParameters is missing, it will trigger this conditional
     if (!death[requiredParameter]) {
+        //sets an error status 422 and sends a response that is an error object with the message that will tell the user which of the requiredParameters they're missing
       return response.status(422).send({ error: `Expected format: { date: <String>, cause_of_death: <String> }.  You're missing a ${requiredParameter} property.`})
     }
   }
 
+  //creates a variable called deathToAdd that will be used later for the actual POST into the tables
   const deathToAdd = {
+    //creates a key value pair, with the value being the countryId that was grabbed from the user's request.  This will act as the foreign key for the new death that we're creating, linking it to the first table/country in the other dataset
     country_id: countryId,
+    //creates a key value pair, using the death date that the user entered in their original request body
     date: death.date,
+    //creates a key value pair, using the death cause that the user entered in their original request body
     cause_of_death: death.cause_of_death
   }
-
+  //goes into the database, finds the one called 'death', then inserts a new entry -- the first argument (deathToAdd, which was the object that was just created) is what we are giving the .insert() method, and the second ('id', which matches one of the columns in the 'deaths' table) is what it will return.  In this case, we will be giving it the death, and we will be receiving the id of said death from .insert()
   database('deaths').insert(deathToAdd, 'id')
+    // after .insert() is complete, and if there was a successful return of an id, the .then will run
     .then(deathId => {
+      // after we receive the id from the death, we are going to set the successful response status, and the response body will be the death object that we created using the information from the request
       response.status(201).json(death)
     })
+      // if the .insert() was unsuccessful and does not return the id, the .catch() will run, indicating there was an error
     .catch(error => {
+        // the .catch will set an error status of 500, returning the error object to the user
       response.status(500).json({ error })
     }) 
 })
 
-
-
-
-
-
+//when the app is successfully running on a port, this will be triggered
 app.listen(app.get('port'), () => {
+  //print the following message in the console, which tells us what port we are running on (will be 3000 when running locally)
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
