@@ -2,7 +2,7 @@
 
 ## Description
 
-Build Your Own Backend is a backend project that takes data from two separate databases - countries and deaths in said countries - and combines them into one dataset.  From there, the data is seeded into two separate tables, which are used for endpoints that a frontend user can hit in order to gather and display the data.
+Build Your Own Backend is a backend project that takes data from two separate databases - countries and deaths in said countries - and combines them into one dataset.  The database is built using PostgreSQL. From there, the data is seeded into two separate tables, which are used for endpoints that a frontend user can hit in order to gather and display the data.  The data is hosted on a server built with Node.js and Express, which allows the user to interact with the data using `GET`, `POST` and `DELETE`.
 
 ## Tech Stack
 * Node.js 
@@ -71,6 +71,8 @@ There are two sets of endpoints, as follows:
 This was a solo project completed over the course of one week at Turing School of Software and Design.
 
 [The project spec can be found here.](https://frontend.turing.io/projects/build-your-own-backend.html)
+
+[This project used GitHub Projects project board.](https://github.com/trishalanglois/byob/projects/1)
 
 
 
